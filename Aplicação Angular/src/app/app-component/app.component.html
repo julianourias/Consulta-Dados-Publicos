@@ -1,0 +1,128 @@
+<h3 class="header">
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button (click)="this.onClickGithub()">
+      <mat-icon svgIcon="github" class="icon"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="this.onClickLinkedin()">
+      <mat-icon svgIcon="linkedin" class="icon"></mat-icon>
+    </button>
+    <span class="titulo">Consulta Dados Públicos IFPR</span>
+  </mat-toolbar>
+</h3>
+<div class="body">
+  <form [formGroup]="form">
+    <mat-form-field class="search-field" appearance="fill">
+      <mat-label>Buscar Dados</mat-label>
+      <input
+        type="search"
+        matInput
+        placeholder="Ex.: Campus Ivaiporã"
+        formControlName="search"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+
+  <div class="linhas">
+    <!-- Coluna 1 -->
+    <div class="colunas">
+      <ng-container
+        *ngFor="
+          let projeto of formArrayFilter.slice(0, formArrayFilter.length / 3);
+          let i = index
+        "
+      >
+        <mat-card class="card">
+          <mat-card-subtitle
+            >Projeto de
+            {{ formatText(projeto.nometipoprojeto) }}</mat-card-subtitle
+          >
+          <mat-card-title class="title">{{ formatText(projeto.titulo) }}</mat-card-title>
+          <mat-card-content>
+            <h3 class="text">
+              Área de {{ formatText(projeto.nometipoprojeto) }}:
+              {{ formatText(projeto.areaextensao) }}
+            </h3>
+            <h3 class="text">Campus: {{ formatText(projeto.nomecampus) }}</h3>
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+            <button mat-button (click)="this.openDialog(projeto)">
+              Mais Informações
+              <mat-icon class="icon">info</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+    <!-- Coluna 2 -->
+    <div class="colunas">
+      <ng-container
+        *ngFor="
+          let projeto of formArrayFilter.slice(
+            formArrayFilter.length / 3,
+            formArrayFilter.length / 3 + formArrayFilter.length / 3 
+          );
+          let i = index
+        "
+      >
+        <mat-card class="card">
+          <mat-card-subtitle
+            >Projeto de
+            {{ formatText(projeto.nometipoprojeto) }}</mat-card-subtitle
+          >
+          <mat-card-title class="title">{{ formatText(projeto.titulo) }}</mat-card-title>
+          <mat-card-content>
+            <h3 class="text">
+              Área de {{ formatText(projeto.nometipoprojeto) }}:
+              {{ formatText(projeto.areaextensao) }}
+            </h3>
+            <h3 class="text">Campus: {{ formatText(projeto.nomecampus) }}</h3>
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+            <button mat-button (click)="this.openDialog(projeto)">
+              Mais Informações
+              <mat-icon class="icon">info</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+
+    <!-- Coluna 3 -->
+    <div class="colunas">
+      <ng-container
+        *ngFor="
+          let projeto of formArrayFilter.slice(
+            formArrayFilter.length / 3 + formArrayFilter.length / 3,
+            formArrayFilter.length
+          );
+          let i = index
+        "
+      >
+        <mat-card class="card">
+          <mat-card-subtitle
+            >Projeto de
+            {{ formatText(projeto.nometipoprojeto) }}</mat-card-subtitle
+          >
+          <mat-card-title class="title">{{ formatText(projeto.titulo) }}</mat-card-title>
+          <mat-card-content>
+            <h3 class="text">
+              Área de {{ formatText(projeto.nometipoprojeto) }}:
+              {{ formatText(projeto.areaextensao) }}
+            </h3>
+            <h3 class="text">Campus: {{ formatText(projeto.nomecampus) }}</h3>
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions>
+            <button mat-button (click)="this.openDialog(projeto)">
+              Mais Informações
+              <mat-icon class="icon">info</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="body">
+  <h1 class="title">Informações Gerais</h1>
+  <mat-card class="card">
+    <h2 class="text">
+      <h2 class="subtitle">Nome Do Projeto:</h2>
+      {{ formatText(data.titulo) }}
+    </h2>
+    <h2 class="text">
+      <h2 class="subtitle">
+        Linha/Área de {{ formatText(data.nometipoprojeto) }}:
+      </h2>
+      {{
+        data.linhaextensao
+          ? formatText(data.linhaextensao)
+          : formatText(data.areapesquisa)
+      }}
+    </h2>
+    <h2 class="text">
+      <h2 class="subtitle">Data de Início:</h2>
+      {{ formatText(data.datainicio) }}
+    </h2>
+    <h2 class="text">
+      <h2 class="subtitle">Data de Término:</h2>
+      {{ formatText(data.datatermino) }}
+    </h2>
+  </mat-card>
+
+  <h1 class="title">Participantes</h1>
+  <div *ngIf="data.participantes">
+    <ng-container *ngFor="let participante of data.participantes">
+      <mat-card class="card">
+        <h2 class="text">
+          <h2 class="subtitle">Posição:</h2>
+          {{ formatText(participante.nometipopessoa) }}
+        </h2>
+        <h2 class="text">
+          <h2 class="subtitle">Nome:</h2>
+          {{ formatText(participante.nomepessoa) }}
+        </h2>
+        <h2 class="text">
+          <h2 class="subtitle">Participação:</h2>
+          {{ formatText(participante.nometipoparticipacao) }}
+        </h2>
+        <h2 class="text">
+          <h2 class="subtitle">Carga Horária:</h2>
+          {{ participante.cargahoraria }}
+        </h2>
+      </mat-card>
+    </ng-container>
+  </div>
+
+  <div *ngIf="!data.participantes">
+    <h2 class="text">Nenhum Participante Encontrado</h2>
+  </div>
+</div>

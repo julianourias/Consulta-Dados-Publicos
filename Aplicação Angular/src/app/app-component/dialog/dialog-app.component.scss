@@ -1,0 +1,35 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 50vh;
+  width: 50vh;
+  padding: 1vh;
+  overflow-y: auto;
+
+  .button {
+    size: 5;
+  }
+
+  .card {
+    background-color: #f8f8ee;
+    margin-bottom: 2vh;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 6;
+    color: black;
+  }
+  
+  .subtitle {
+    font-size: 3;
+    color: black;
+    display: inline;
+  }
+
+  .text {
+    font-size: 5;
+    font-weight: 400;
+  }
+}
