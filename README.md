@@ -8,7 +8,7 @@ npm install
 npm start
 ```
 
-Após esses passos você terá sua API Node.js rodando em "http://localhost:3000", e poderá acessar seus dados nas seguintes rotas:
+Após esses passos você terá sua API Node.js rodando em `http://localhost:3000`, e poderá acessar seus dados nas seguintes rotas:
 
 `http://localhost:3000/dados`: Fornece o nome, tamanho e tipo dos dados disponíveis.<br />
 `http://localhost:3000/dados/:nome`: Passando o nome do arquivo como paramêtro, você receberá seus dados em formato JSON como retorno.
