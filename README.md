@@ -1,7 +1,7 @@
 # Consulta de Dados Públicos
 Repositório criado para atividade extensionista do curso "Análise e Desenvolvimento de Sistemas - UNINTER", com objetivo de ser uma aplicação que fornece dados públicos (disponíveis em: https://dados.gov.br/) por meio de API no formato JSON, além de trazer um exemplo de aplicação Web que consome dados dessa API. A aplicação Web foi desenvolvida em Angular e a API foi desenvolvida em Node.js com Express.js.
 
-Para executar as aplicações você precisará ter o <a href="https://nodejs.org/en/download/">Node.js</a> instalado, e depois execute os seguintes comandos no terminal (na pasta raíz de ambas aplicações): 
+Para executar as aplicações você precisará ter o <a href="https://nodejs.org/en/download/">Node.js</a> instalado, e depois executar os seguintes comandos no terminal (na pasta raíz de ambas aplicações): 
 
 ```
 npm install
