@@ -1,2 +1,2 @@
-# Dados-Publicos-IFPR
-Aplicação criada para atividade extensionista do curso de Análise e Desenvolvimento de Sistemas, sendo composta por uma API em Node.js + Express, que é alimentada com arquivos de dados públicos disponíveis em "https://dados.gov.br/", e uma aplicação em Angular que consome os dados da API e fornece uma interface de busca para consulta. 
+# Consulta de Dados Píblicos IFPR
+Repositório criado para atividade extensionista do curso "Análise e Desenvolvimento de Sistemas - UNINTER", com objetivo de ser uma aplicação que fornece dados públicos (disponíveis em "https://dados.gov.br/") por meio de API no formato JSON, além de trazer um exemplo de aplicação Web que consome os dados dessa API. A API foi desenvolvida em Node.js com Express.js, e a aplicação Web foi desenvolvida em Angular.
