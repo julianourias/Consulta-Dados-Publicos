@@ -106,13 +106,13 @@ export class AppComponent implements OnInit {
 
   onClickLinkedin() {
     window.open(
-      'https://www.linkedin.com/in/juliano-augusto-5b1693198/',
+      'https://www.linkedin.com/in/julianourias/',
       '_blank'
     );
   }
 
   onClickGithub() {
-    window.open('https://github.com/JulianoReactNative', '_blank');
+    window.open('https://github.com/julianourias', '_blank');
   }
 
   openDialog(data: any) {
